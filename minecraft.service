@@ -1,0 +1,19 @@
+[Unit]
+Description=Vanilla Minecraft server
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=10
+User=robyn
+WorkingDirectory=/home/robyn/minecraft
+ExecStart=/home/robyn/minecraft/scripts/start.sh
+Sockets=minecraft.socket
+StandardInput=socket
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
