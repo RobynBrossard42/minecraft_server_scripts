@@ -10,10 +10,11 @@ RestartSec=10
 User=robyn
 WorkingDirectory=/home/robyn/minecraft
 ExecStart=/home/robyn/minecraft/scripts/start.sh
+ExecStop=/home/robyn/minecraft/scripts/stop.sh
 Sockets=minecraft.socket
 StandardInput=socket
 StandardOutput=journal
 StandardError=journal
-
+TimeoutStopSec=360
 [Install]
 WantedBy=multi-user.target
