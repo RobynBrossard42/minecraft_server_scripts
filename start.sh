@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /home/robyn/minecraft
-java -jar server.jar --nogui
+java -jar -Xmx10G server.jar --nogui
